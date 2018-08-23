@@ -97,7 +97,8 @@ int main(int argc, char *argv[]) {
     en_de_crypt(TRUE);
 
     //Decrypt file now
-    
+    /****bug when input string is too long
+    *****/
     printf("%s", en_de_crypt(FALSE));
     return 0;
 }
