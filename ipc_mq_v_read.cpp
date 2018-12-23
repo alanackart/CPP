@@ -1,6 +1,4 @@
-/* 文件：map_v_read.cpp
-   描述:和map_v_write.cpp文件配合完成系统V共享内存编程实验
- */
+
 #include <sys/shm.h>
 #include <unistd.h>
  
@@ -14,7 +12,7 @@ typedef struct{
     int age;
 } person;
  
-main(int argc, char** argv)
+int main(int argc, char** argv)
 {
     int shm_id,i;
     key_t key;
@@ -41,4 +39,5 @@ main(int argc, char** argv)
     //unlink
     shmdt((char*)p_map);
     perror("shmdt:");
+    return 0;
 }
