@@ -1,8 +1,4 @@
-/* 文件：map_v_write.cpp
-   描述:和map_v_read.cpp文件配合完成系统V共享内存编程实验
- */
-//#include <sys/ipc.h>
-//#include <sys/types.h>//注释掉的两个头文件是IPC最基本的，但在shm.h中include过了
+
 #include <sys/shm.h>//系统V共享内存函数shmget shmat shmdt
  
 #include <string.h>//memcpy
@@ -15,7 +11,7 @@ typedef struct{
     int age;
 }person;
  
-main(int argc, char** argv)
+int main(int argc, char** argv)
 {
     int shm_id,i;
     key_t key;//保存ftok函数返回值
@@ -153,5 +149,5 @@ DESCRIPTION
      standard-conforming (see standards(5)), the shmaddr argument
      is of type const void *. Otherwise it is of type char *.
 */
- 
+   return 0;
 }
