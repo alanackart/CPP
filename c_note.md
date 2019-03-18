@@ -6,6 +6,8 @@ static 函数与普通函数有什么区别： 			static 函数在内存中只�
 union 与struct, see https://stackoverflow.com/questions/22844542/sizeofstruct-and-sizeofunion
 
 3. sizeof vs strlen
+
+
 sizeof()
 
 Sizeof operator is a compile time unary operator which can be used to compute the size of its operand.
@@ -15,8 +17,12 @@ sizeof can be applied to any data-type, including primitive types such as intege
 strlen()
 
 strlen() is a predefined function in C whose definition is contained in the header file “string.h”.
+
+
 4. 对于一个频繁使用的短小函数,在 C 语言中应用什么实现,在 C++中应用什么实现?
  c 用宏定义，c++用 inline 
+ 
+ 
 5. 请问下面程序有什么错误?
 int a[60][250][1000],i,j,k;
 for(k=0;k<=1000;k++)
@@ -24,7 +30,9 @@ for(j=0;j<250;j++)
 for(i=0;i<60;i++)
 a[i][j][k]=0;
 答: 把循环语句内外换一下
-6. 
+
+
+6.
 
 
 #include <stdio.h>
