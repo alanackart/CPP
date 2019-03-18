@@ -25,6 +25,8 @@ for(i=0;i<60;i++)
 a[i][j][k]=0;
 答: 把循环语句内外换一下
 6. 
+
+
 #include <stdio.h>
 
 #define Square(x) ({ typeof (x) _x = (x); _x * _x; })
