@@ -24,3 +24,17 @@ for(j=0;j<250;j++)
 for(i=0;i<60;i++)
 a[i][j][k]=0;
 答: 把循环语句内外换一下
+6. 
+#include <stdio.h>
+
+#define Square(x) ({ typeof (x) _x = (x); _x * _x; })
+#define SQUARE(a)((a)*(a))
+//see https://stackoverflow.com/questions/14662815/define-squarex-xx
+int main() {
+    int x = 5;
+    printf("%d\n", Square(x++));
+    printf("x now is %d!\n", x);
+    printf("%d\n", SQUARE(x++));
+    return 0;
+}
+
