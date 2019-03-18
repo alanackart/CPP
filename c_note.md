@@ -34,12 +34,10 @@ a[i][j][k]=0;
 
 6.
 
-
 #include <stdio.h>
-
 #define Square(x) ({ typeof (x) _x = (x); _x * _x; })
 #define SQUARE(a)((a)*(a))
-//see https://stackoverflow.com/questions/14662815/define-squarex-xx
+/*see https://stackoverflow.com/questions/14662815/define-squarex-xx*/
 int main() {
     int x = 5;
     printf("%d\n", Square(x++));
