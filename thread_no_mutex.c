@@ -4,6 +4,8 @@
 #include <sys/syscall.h>
 
 int sharedi = 0;
+  struct timespec tim;
+
 /* a question for programmmer with no thread programming 
 experience would be what's the range of shardi 
 */
@@ -14,6 +16,8 @@ int main()
 {
     int ret;
     pthread_t thrd1, thrd2, thrd3;
+   tim.tv_sec = 1;
+   tim.tv_nsec = 500;
     char *message1 = "thread1";
     char *message2 = "thread2";
     char *message3 = "thread3";
@@ -40,7 +44,8 @@ void increse_num(void *message)
         tmp = sharedi;
         tmp = tmp + 1;
         sharedi = tmp;
-        printf("#### In %s: threadid = %ld, pid = %ld, sharedi = %d, i = %ld ######\n", (char *)message, gettid(), getpid(), sharedi, i);
+        //printf("#### In %s: threadid = %ld, pid = %ld, sharedi = %d, i = %ld ######\n", (char *)message, gettid(), getpid(), sharedi, i);
+        nanosleep((const struct timespec[]){{0, 500L}}, NULL);
     }
 }
 
