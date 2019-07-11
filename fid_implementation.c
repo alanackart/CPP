@@ -27,19 +27,23 @@ int RegFun(int (*pFun)(int x, int y))
     return 0;
 }
  
-int Max(int x, int y)
-{
-    if(x > y)
-    {
-        return x;
-    }
-    else
-    {
-        return y;
-    }
+int ABCD(int idx) {
+    printf("ABCD was called, idx=%d\n", idx);
+    switch(idx){
+    case 1:
+        printf("ABCD, case %d\n", idx);
+        break;
+    case 2:
+        printf("ABCD, case %d\n", idx);
+        break;
+    default:
+        printf("ABCD, case idx not defined\n");
+        
+    }   
+    return 0;
 }
  
-int Min(int x, int y)
+int BCDE(int x, int y)
 {
     if (x < y)
         return x;
@@ -51,12 +55,14 @@ int main(int argc, char const *argv[])
 {
     /* code */
     DATA ds = {3, 4}; 
+    DATA ds2 = {.x=3, .y=4}; 
     printf("x=%d, y=%d\n", ds.x, ds.y);
-    RegFun(Min);
+    /*RegFun(Min);
     Plat(&ds);
  
     RegFun(Max);
     Plat(&ds);
- 
+    */ 
+    ABCD(1);
     return 0;
 }
