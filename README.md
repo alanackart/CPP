@@ -7,3 +7,4 @@ c/cpp code snippets and programs
 - 多线程使用**mutex** 锁机制来保证同一时刻仅有一个线程处于**竞争区域(critical region)**， [thread_with_mutex.c](https://github.com/alanackart/CPP/blob/master/thread_with_mutex.c)
 - 演示调用system时将占用程序中已经绑定的端口， [system_bind.c](https://github.com/alanackart/CPP/blob/master/system_bind.c)
 - 实现FID协议(多级调用， 第一次调用执行函数的case 0，完成后再次调用函数执行函数的case 1, 未完待续)[fid_implementation.c](https://github.com/alanackart/CPP/blob/master/fid_implementation.c)
+- 一个用宏定义写的日志输出函数[log.h](https://github.com/alanackart/CPP/blob/master/log.h)
